@@ -59,6 +59,10 @@ function App() {
     setItemIndex(index);
   }  
 
+  useEffect(()=>{
+    document.title = "CRUD";
+  },[])
+
   return (
     <>
       <div className='bg-gray-700 min-h-screen flex flex-col justify-center place-items-center dark:text-white'>
