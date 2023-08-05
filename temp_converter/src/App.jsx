@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -14,10 +14,14 @@ function App() {
     setFahrenheit(event.target.value);
     setCelsius((event.target.value - 32) * (5/9));
   }
+  useEffect(()=>{
+    document.title = "CONVERTER";
+  },[])
 
   return (
     <>
       <div>
+          <h2>CONVERTER</h2>
         <span>
           <input type='text' value={celsius} onChange={handleCelsiusChange}/>
           <label htmlFor=""> Celsius = </label>
